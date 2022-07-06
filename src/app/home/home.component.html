@@ -1,0 +1,20 @@
+<mat-stepper orientation="vertical" [linear]="linear" #stepper>
+  <mat-step [stepControl]="stepForm">
+    <ng-template matStepLabel>Hello...</ng-template>
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        placeholder="Last name, First name"
+        [formControl]="control"
+        required
+      />
+    </mat-form-field>
+    <div>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>So, tell me..</ng-template>
+  </mat-step>
+</mat-stepper>

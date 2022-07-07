@@ -1,1 +1,11 @@
-<router-outlet></router-outlet>
+<main>
+  <mat-sidenav-container>
+    <mat-sidenav [mode]="'side'" opened>
+      <h2>Characters</h2>
+      <mat-divider></mat-divider>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</main>

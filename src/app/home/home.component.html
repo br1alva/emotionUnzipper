@@ -1,4 +1,4 @@
-<main>
+<div class="content d-flex ai-center jc-center">
   <mat-card>
     <mat-stepper
       orientation="vertical"
@@ -22,12 +22,12 @@
                   [matTooltip]="option.tooltip"
                   [matTooltipPosition]="'above'"
                 >
-                  {{ option.label | titlecase }}
+                  {{ option.label }}
                 </mat-button-toggle>
               </mat-button-toggle-group>
             </div>
           </div>
-          <p class="story p-r-3">It's</p>
+          <p class="story p-r-3">{{ story }}</p>
 
           <!-- <mat-form-field [appearance]="'fill'">
             <mat-select [placeholder]="'Pronoun'">
@@ -42,13 +42,13 @@
             <input matInput placeholder="Pronoun" formControlName="pronoun" />
           </mat-form-field> -->
         </form>
-        <div>
+        <!-- <div>
           <button mat-button matStepperNext>Next</button>
-        </div>
+        </div> -->
       </mat-step>
       <mat-step>
         <ng-template matStepLabel>So, tell me..</ng-template>
       </mat-step>
     </mat-stepper>
   </mat-card>
-</main>
+</div>

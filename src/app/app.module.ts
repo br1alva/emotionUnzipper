@@ -8,11 +8,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
 import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 const components = [AppComponent, HomeComponent];
 
@@ -25,11 +28,14 @@ const angularModules = [
 
 const materialModules = [
   MatButtonModule,
+  MatButtonToggleModule,
   MatCardModule,
   MatGridListModule,
   MatInputModule,
   MatFormFieldModule,
+  MatSelectModule,
   MatStepperModule,
+  MatTooltipModule,
 ];
 
 @NgModule({

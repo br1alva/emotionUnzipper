@@ -6,19 +6,42 @@
       [orientation]="orientation"
       #stepper
     >
-      <mat-step [stepControl]="stepForm">
+      <mat-step [stepControl]="welcomeForm">
         <ng-template matStepLabel>Hello there :)</ng-template>
-        <h2 class="m-0">So, tell me...</h2>
-        <p class="hint">What brings you here?</p>
-        <mat-form-field appearance="fill">
-          <mat-label>Name</mat-label>
-          <input
-            matInput
-            placeholder="Last name, First name"
-            [formControl]="control"
-            required
-          />
-        </mat-form-field>
+        <form [formGroup]="welcomeForm">
+          <div class="header d-flex ai-center m-b-3">
+            <div class="caption m-r-4">
+              <h1 class="m-0">So, tell me...</h1>
+              <h3 class="m-0 subtitle">What brings you here?</h3>
+            </div>
+            <div class="first-exp-ownership">
+              <mat-button-toggle-group formControlName="isProyected">
+                <mat-button-toggle
+                  *ngFor="let option of ownershipOptions"
+                  [value]="option.value"
+                  [matTooltip]="option.tooltip"
+                  [matTooltipPosition]="'above'"
+                >
+                  {{ option.label | titlecase }}
+                </mat-button-toggle>
+              </mat-button-toggle-group>
+            </div>
+          </div>
+          <p class="story p-r-3">It's</p>
+
+          <!-- <mat-form-field [appearance]="'fill'">
+            <mat-select [placeholder]="'Pronoun'">
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Pronoun" formControlName="pronoun" />
+          </mat-form-field> -->
+        </form>
         <div>
           <button mat-button matStepperNext>Next</button>
         </div>

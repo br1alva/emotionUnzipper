@@ -4,7 +4,6 @@ import { MatButtonToggleChange } from '@angular/material/button-toggle';
 import { map, Subscription } from 'rxjs';
 import { Pronoun } from '../shared/models/pronoun.model';
 import { Relationship } from '../shared/models/relationship.model';
-import { FormService } from '../shared/services/form.service';
 
 @Component({
   selector: 'app-home',
@@ -31,7 +30,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   story = '';
   private sub!: Subscription;
 
-  constructor(private fb: FormBuilder, private forms: FormService) {}
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
     this.updateStory(this.welcomeForm.value);

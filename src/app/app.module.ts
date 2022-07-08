@@ -18,8 +18,15 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { CharacterChipsComponent } from './sidenav/character-chips/character-chips.component';
 
-const components = [AppComponent, HomeComponent];
+const components = [
+  AppComponent,
+  SidenavComponent,
+  HomeComponent,
+  CharacterChipsComponent,
+];
 
 const angularModules = [
   BrowserModule,
